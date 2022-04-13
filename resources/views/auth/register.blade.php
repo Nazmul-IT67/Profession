@@ -41,7 +41,7 @@
                                     <div class="register-box">
                                         <a href="{{ url('register') }}" class="logo-name text-lg text-center m-t-xs">METEOR</a>
                                         <p class="text-center m-t-md">Create an account.</p>
-                                        <form class="m-t-md" method="POST" action="{{ route('register') }}">
+                                        <form class="m-t-md" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-group">
                                                 <input type="text" name="name" class="form-control" placeholder="Name" >

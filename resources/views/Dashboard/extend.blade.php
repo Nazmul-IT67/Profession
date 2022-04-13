@@ -125,7 +125,7 @@
                     </a>
                 </div>
                 <div class="logo-box">
-                    <a href="index.html" class="logo-text"><span>METEOR</span></a>
+                    <a href="{{ url('dashboard') }}" class="logo-text"><span>Nazmul_IT</span></a>
                 </div>
                 <div class="topmenu-outer">
                     <div class="top-menu">
@@ -337,13 +337,17 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="user-name">{{ Auth::user()->name ?? 'N/A' }}<i
-                                            class="fa fa-angle-down"></i></span>
+                                    <span class="user-name">{{ Auth::user()->name ?? 'N/A' }}
+                                        <i class="fa fa-angle-down"></i>
+                                    </span>
+                                    {{-- <img class="img-circle avatar" src="users/{{ Auth::user()->image }}" width="40"
+                                    height="40"> --}}
                                     <img class="img-circle avatar" src="assets/images/avatar1.png" width="40"
                                         height="40" alt="">
                                 </a>
                                 <ul class="dropdown-menu dropdown-list" role="menu">
-                                    <li role="presentation"><a href="#"><i class="icon-user"></i>Profile</a></li>
+                                    <li role="presentation"><a href="{{ url('profile') }}"><i
+                                                class="icon-user"></i>Profile</a></li>
                                     <li role="presentation"><a href="#"><i class="icon-envelope-open"></i>Inbox<span
                                                 class="badge badge-success pull-right"></span></a></li>
                                     <li role="presentation" class="divider"></li>
@@ -376,32 +380,58 @@
                     <li><a href="{{ url('dashboard') }}" class="waves-effect waves-button"><span
                                 class="menu-icon icon-home"></span>
                             <p>Dashboard</p>
-                        </a></li>
+                        </a>
+                    </li>
 
-                    <li><a href="profile.html" class="waves-effect waves-button"><span
+                    <li><a href="{{ url('user') }}" class="waves-effect waves-button"><span
+                                class="menu-icon icon-users"></span>
+                            <p>Users</p>
+                        </a>
+                    </li>
+
+                    <li><a href="{{ url('profile') }}" class="waves-effect waves-button"><span
                                 class="menu-icon icon-user"></span>
                             <p>Profile</p>
-                        </a></li>
+                        </a>
+                    </li>
 
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><span
-                                class="menu-icon icon-envelope-open"></span>
-                            <p>Mailbox</p><span class="arrow"></span><span class="active-page"></span>
+                                class="menu-icon icon-present"></span>
+                            <p>Abouts</p><span class="arrow"></span><span class="active-page"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li class="active"><a href="inbox.html">Inbox</a></li>
-                            <li><a href="message-view.html">View Message</a></li>
-                            <li><a href="compose.html">Compose</a></li>
+                            <li class="active"><a href="{{ url('about-list') }}">Abouts US</a></li>
+                            <li><a href="{{ url('about') }}">Add Abouts</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span
+                                class="menu-icon icon-camera"></span>
+                            <p>Services</p><span class="arrow"></span><span class="active-page"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="active"><a href="{{ url('services-list') }}">All Services</a></li>
+                            <li><a href="{{ url('add-services') }}">Add Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span
+                                class="menu-icon icon-camera"></span>
+                            <p>Portfolios</p><span class="arrow"></span><span class="active-page"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ url('add-portfolio') }}">Add Portfolios</a></li>
+                            <li><a href="{{ url('portfolio') }}">All Portfolios</a></li>
                         </ul>
                     </li>
 
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><span
                                 class="menu-icon icon-grid"></span>
-                            <p>Tables</p><span class="arrow"></span>
+                            <p>Testimunial</p><span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="table-static.html">Static Tables</a></li>
-                            <li><a href="table-responsive.html">Responsive Tables</a></li>
-                            <li><a href="table-data.html">Data Tables</a></li>
+                            <li><a href="{{ url('add-testimunial') }}">Add Testimunial</a></li>
+                            <li><a href="{{ url('all-testimunial') }}">All Testimunial</a></li>
                         </ul>
                     </li>
 

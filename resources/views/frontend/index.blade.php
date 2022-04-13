@@ -6,7 +6,8 @@
     <title>Profession - Personal Portfolio Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Profession is Personal Portfolio Template">
-    <meta name="keywords" content="business, clean, contact form, corporate, cv, light, minimalist, modern, personal, personal profile, portfolio, resume, vcard, virtual card">
+    <meta name="keywords"
+        content="business, clean, contact form, corporate, cv, light, minimalist, modern, personal, personal profile, portfolio, resume, vcard, virtual card">
     <meta name="author" content="">
 
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.css') }}" type="text/css">
@@ -68,7 +69,8 @@
             <div id="top"></div>
 
             <!-- section begin -->
-            <section id="section-hero" class="full-height relative no-top no-bottom text-white" data-stellar-background-ratio=".2">
+            <section id="section-hero" class="full-height relative no-top no-bottom text-white"
+                data-stellar-background-ratio=".2">
                 <div class="overlay-gradient">
                     <div class="overlay-bg t30">
                         <div class="center-y fadeScroll relative" data-scroll-speed="4">
@@ -78,7 +80,7 @@
                                         <div class="spacer-double"></div>
                                         <h5 class="mb20">Introduction</h5>
 
-										<div class="h1_big text-white">My Name John Arnold, a<br> London Based
+                                        <div class="h1_big text-white">My Name is Nazmul Islam, a<br> London Based
                                             <div class="typed-strings">
                                                 <p>Designer</p>
                                                 <p>Programmer</p>
@@ -108,7 +110,9 @@
                             <h2>Welcome To My Site</h2>
                         </div>
                         <div class="col-md-8 col-md-offset-2 text-center">
-                            <p>I am a website designer from London, with a strong focus in UI/UX design. I love to get new experiences and always learn from my surroundings. I've done more than 285 projects. You can check it through portfolio section on
+                            <p>I am a website designer from London, with a strong focus in UI/UX design. I love to get
+                                new experiences and always learn from my surroundings. I've done more than 285 projects.
+                                You can check it through portfolio section on
                                 this website. I looking forward to any opportunities and challenges. </p>
                         </div>
                     </div>
@@ -116,67 +120,17 @@
                     <div class="spacer-single"></div>
 
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Design</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="80%">
+                        <div class="col-md-12">
+                            @foreach ($abouts as $key => $about)
+                                <div class="skill-bar style-2">
+                                    <h5>{{ $about->title }}</h5>
+                                    <div class="de-progress">
+                                        <div class="value"></div>
+                                        <div class="progress-bar" data-value="{{ $about->value }}%">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>Branding</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="70%">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Marketing</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="70%">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>Development</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="90%">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Photography</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="90%">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>SEO</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="75%">
-                                    </div>
-                                </div>
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -195,79 +149,17 @@
                                     <h2>I'm Available For Hire</h2>
 
                                     <div id="carousel-3" class="sequence" data-anim="fadeInUp">
-
-                                        <!-- feature box begin -->
+                                        @foreach ($services as $service)
                                         <div class="feature-box col-md-4 carousel-item sq-item wow">
                                             <div class="inner">
                                                 <i class="icon_lightbulb_alt id-color"></i>
                                                 <div class="text">
-                                                    <h3>Design</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
+                                                    <h3>{{ $service->heading }}</h3>
+                                                    {{ $service->description }}
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- feature box close -->
-
-                                        <!-- feature box begin -->
-                                        <div class="feature-box col-md-4 carousel-item sq-item wow">
-                                            <div class="inner">
-                                                <i class="icon_datareport id-color"></i>
-                                                <div class="text">
-                                                    <h3>Marketing</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- feature box close -->
-
-                                        <!-- feature box begin -->
-                                        <div class="feature-box col-md-4 carousel-item sq-item wow">
-                                            <div class="inner">
-                                                <i class="icon_camera_alt id-color"></i>
-                                                <div class="text">
-                                                    <h3>Photography</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- feature box close -->
-
-                                        <!-- feature box begin -->
-                                        <div class="feature-box col-md-4 carousel-item sq-item wow">
-                                            <div class="inner">
-                                                <i class="icon_tag_alt id-color"></i>
-                                                <div class="text">
-                                                    <h3>Branding</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- feature box close -->
-
-                                        <!-- feature box begin -->
-                                        <div class="feature-box col-md-4 carousel-item sq-item wow">
-                                            <div class="inner">
-                                                <i class="icon_pencil-edit id-color"></i>
-                                                <div class="text">
-                                                    <h3>Development</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- feature box close -->
-
-                                        <!-- feature box begin -->
-                                        <div class="feature-box col-md-4 carousel-item sq-item wow">
-                                            <div class="inner">
-                                                <i class="icon_search id-color"></i>
-                                                <div class="text">
-                                                    <h3>SEO</h3>
-                                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- feature box close -->
-
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -289,114 +181,33 @@
                             <h2>I Love What I Do</h2>
                         </div>
 
-                        <div class="col-md-12 text-center mt50">
+                        <div class="col-md-12 text-center mt-10">
                             <ul id="filters">
-                                <li><a href="#" data-filter="*" class="selected">all projects</a></li>
-                                <li><a href="#" data-filter=".illustration">illustration</a></li>
-                                <li><a href="#" data-filter=".mobile">mobile</a></li>
-                                <li><a href="#" data-filter=".photography">photography</a></li>
-                                <li><a href="#" data-filter=".website">website</a></li>
+                                <li><h3 class="selected">All projects</h3></li>
                             </ul>
 
-
-
-
-                            <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_3_cols grid sequence">
+                            <div id="gallery"
+                                class="gallery full-gallery de-gallery pf_full_width pf_3_cols grid sequence">
 
                                 <!-- gallery item -->
+                                @foreach ($portfolio as $user)
                                 <div class="item illustration website gallery-item">
                                     <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(1).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(1).jpg') }}" alt="" />
-										</a>
+                                        <a class="image-popup"
+                                            href="image/{{ $user->image }}">
+                                            <span class="overlay">
+                                                <span class="pf_text">
+                                                    <span class="project-name">{{ $user->name }}</span>
+                                                </span>
+                                            </span>
+                                            <img src="images/{{ $user->image }}"
+                                                alt="" />
+                                        </a>
                                     </div>
                                 </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography gallery-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(2).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(2).jpg') }}" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item illustration gallery-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(3).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(3).jpg') }}" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography illustration mobile gallery-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(4).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(4).jpg') }}" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography mobile website gallery-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(5).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(5).jpg') }}" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item mobile website gallery-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="{{ asset('frontend/images/portfolio/pf%20(6).jpg') }}">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Project Name</span>
-												</span>
-											</span>
-											<img src="{{ asset('frontend/images/portfolio/pf%20(6).jpg') }}" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
+                                @endforeach
                             </div>
                         </div>
-                        <!-- portfolio filter close -->
-
                     </div>
 
                 </div>
@@ -418,17 +229,23 @@
                                         <div class="exp-box">
                                             <h5>2014 - now</h5>
                                             <h3>Fulltime Freelancer</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto beatae.</p>
                                         </div>
                                         <div class="exp-box">
                                             <h5>2010 - 2014</h5>
                                             <h3>Creative Director at Pixar Studio</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto.</p>
                                         </div>
                                         <div class="exp-box">
                                             <h5>2006 - 2010</h5>
                                             <h3>Web Designer at Microsoft</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -439,17 +256,23 @@
                                         <div class="exp-box">
                                             <h5>2014</h5>
                                             <h3>Specialize App Design, Harvard University</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto beatae.</p>
                                         </div>
                                         <div class="exp-box">
                                             <h5>2010</h5>
                                             <h3>Master of Design, University of California</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto.</p>
                                         </div>
                                         <div class="exp-box">
                                             <h5>2006</h5>
                                             <h3>Bachelor of Arts, Standford University</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                                illo inventore veritatis et quasi architecto.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -474,53 +297,21 @@
 
                         <div id="testimonial-carousel" class="de_carousel sequence" data-wow-delay=".3s">
 
+                            @foreach ($testimunial as $user)
                             <div class="col-md-6 item sq-item wow">
                                 <div class="de_testi opt-2">
                                     <blockquote>
                                         <div class="de_testi_by">
-                                            <img src="{{ asset('frontend/images/people/1.jpg') }}" class="img-circle" alt="">
-                                            <span>John, Pixar Studio</span>
+                                            <img src="Testimunial/{{ $user->image }}"
+                                                class="img-circle" alt="">
+                                            <span>{{ $user->name }}</span>
                                         </div>
-                                        <p>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore"</p>
+                                        <p>{{ $user->description }}</p>
                                     </blockquote>
                                 </div>
                             </div>
+                            @endforeach
 
-                            <div class="col-md-6 item sq-item wow">
-                                <div class="de_testi opt-2">
-                                    <blockquote>
-                                        <div class="de_testi_by">
-                                            <img src="{{ asset('frontend/images/people/2.jpg') }}" class="img-circle" alt="">
-                                            <span>Sarah, Microsoft</span>
-                                        </div>
-                                        <p>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore"</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 item sq-item wow">
-                                <div class="de_testi opt-2">
-                                    <blockquote>
-                                        <div class="de_testi_by">
-                                            <img src="{{ asset('frontend/images/people/3.jpg') }}" class="img-circle" alt="">
-                                            <span>Michael, Apple</span>
-                                        </div>
-                                        <p>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore"</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 item sq-item wow">
-                                <div class="de_testi opt-2">
-                                    <blockquote>
-                                        <div class="de_testi_by">
-                                            <img src="{{ asset('frontend/images/people/4.jpg') }}" class="img-circle" alt="">
-                                            <span>Thomas, Samsung</span>
-                                        </div>
-                                        <p>"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore"</p>
-                                    </blockquote>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -575,20 +366,24 @@
 
                         <div class="col-md-8 col-md-offset-2 wow fadeInUp">
                             <div class="row">
-                                <form name="contactForm" id='contact_form' class="s2" method="post" action='email.php'>
+                                <form name="contactForm" id='contact_form' class="s2" method="post"
+                                    action='email.php'>
                                     <div class="col-md-6">
                                         <div class="field-set">
-                                            <input type='text' name='name' id='name' class="form-control" placeholder="Your Name">
+                                            <input type='text' name='name' id='name' class="form-control"
+                                                placeholder="Your Name">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='email' id='email' class="form-control" placeholder="Your Email">
+                                            <input type='text' name='email' id='email' class="form-control"
+                                                placeholder="Your Email">
                                             <div class="line-fx"></div>
                                         </div>
 
                                         <div class="field-set">
-                                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone">
+                                            <input type='text' name='phone' id='phone' class="form-control"
+                                                placeholder="Your Phone">
                                             <div class="line-fx"></div>
                                         </div>
                                     </div>
@@ -604,10 +399,13 @@
 
                                     <div class="col-md-12 text-center">
                                         <div id='submit'>
-                                            <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom color-2">
+                                            <input type='submit' id='send_message' value='Submit Form'
+                                                class="btn btn-custom color-2">
                                         </div>
-                                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                        <div id='mail_success' class='success'>Your message has been sent successfully.
+                                        </div>
+                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your
+                                            message.</div>
                                     </div>
                                 </form>
                             </div>
@@ -646,7 +444,9 @@
 
             <!-- section begin -->
             <section id="section-map" class="map-container no-top no-bottom" aria-label="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25214.351955908594!2d144.93916650352472!3d-37.81829399866787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sid!4v1606280383060!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25214.351955908594!2d144.93916650352472!3d-37.81829399866787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sid!4v1606280383060!5m2!1sen!2sid"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </section>
             <!-- section close -->
 

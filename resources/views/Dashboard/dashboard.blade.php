@@ -15,4 +15,5 @@
                 <p class="no-s">Made with <i class="fa fa-heart"></i> by stacks</p>
             </div>
         </div>
-    @endsection
+    </div>
+@endsection
